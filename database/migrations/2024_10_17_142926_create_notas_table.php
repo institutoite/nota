@@ -13,10 +13,12 @@ return new class extends Migration
     {
         Schema::create('notas', function (Blueprint $table) {
             $table->id();
-            $table->$table->tinyInteger('tremestre1');
-            $table->$table->tinyInteger('tremestre2');
-            $table->$table->tinyInteger('tremestre3');
-            $table->$table->tinyInteger('materia');
+            $table->integer('trimestre1');
+            $table->integer('trimestre2');
+            $table->integer('trimestre3');
+            $table->string('telefono',8);
+            $table->unsignedBigInteger("materia_id");
+            $table->foreign("materia_id")->references("id")->on("materias");
             $table->timestamps();
         });
     }
