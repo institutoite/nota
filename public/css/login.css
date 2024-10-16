@@ -129,3 +129,48 @@ body {
 .inferior a:hover {
     color: #3282b8;
 }
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%select%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+/* Estilo general para el select */
+.custom-select {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espacio interno */
+    border: 2px solid #00bcd4; /* Borde */
+    margin-bottom: 7px;
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Color de fondo */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #444; /* Color del texto */
+    appearance: none; /* Elimina el estilo por defecto del navegador */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><polygon points="0,0 10,0 5,5" fill="%2300bcd4"/></svg>'); /* Flecha personalizada */
+    background-repeat: no-repeat; /* No repetir la imagen de fondo */
+    background-position: right 10px center; /* Posición de la flecha */
+    background-size: 10px; /* Tamaño de la flecha */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+/* Cambiar color del borde al enfocar */
+.custom-select:focus {
+    border-color: #00796b; /* Color al enfocar */
+    outline: none; /* Sin contorno */
+}
+
+/* Opciones dentro del select */
+.custom-select option {
+    padding: 10px; /* Espacio interno en las opciones */
+    background-color: white; /* Color de fondo de las opciones */
+    color: #444; /* Color del texto de las opciones */
+}
+
+/* Cambiar el color de fondo de las opciones al pasar el ratón */
+.custom-select option:hover {
+    background-color: #e0f7fa; /* Color al pasar el ratón */
+}
+
+/* Media queries para responsividad */
+@media (max-width: 600px) {
+    .custom-select {
+        font-size: 14px; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    }
+}

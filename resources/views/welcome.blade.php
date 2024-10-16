@@ -15,19 +15,23 @@
                     Bienvenido
                 </div>
                 <form id="loginform">
-                    <input type="text" name="usuario" placeholder="Usuario" required>
+                    <input type="text" name="trimestre1" placeholder="nota primer trimestre" required>
+                    <input type="text" name="trimestre2" placeholder="nota segundo trimestre" required>
+                    <select class="custom-select" id="materia_id" name="materia_id" required>
+                        <option value="">Seleccione una materia</option>
+                        @foreach($materias as $materia)
+                            <option value="{{ $materia->id }}">{{ $materia->materia }}</option>
+                        @endforeach
+                    </select>
+                    <input type="text" name="telefono" placeholder="telefono" required>
                     
-                    <input type="password" placeholder="Contraseña" name="password" required>
+                    <input type="promediodeseado" placeholder="Promedio deseado" value="51" name="promediodeseado" required>
                     
-                    <button type="submit" title="Ingresar" name="Ingresar">Login</button>
+                    <button type="submit" title="Ingresar" name="Ingresar">Calcular</button>
                 </form>
                 <div class="pie-form">
-                    <a href="#">¿Perdiste tu contraseña?</a>
-                    <a href="#">¿No tienes Cuenta? Registrate</a>
+                    <a href="#">sigueme en tik tok</a>
                 </div>
-            </div>
-            <div class="inferior">
-                <a href="#">Volver</a>
             </div>
         </div>
     </div>
