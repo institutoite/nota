@@ -2,17 +2,15 @@ body {
     font-family: 'Overpass', sans-serif;
     font-weight: normal;
     font-size: 100%;
-    color: #1b262c;
-    
+    color: rgb(38, 186, 165); /* Color principal de texto */
     margin: 0;
-    background-color: #0f4c75;
+    background-color: rgb(55, 95, 122); /* Color de fondo principal */
 }
 
 #contenedor {
     display: flex;
     align-items: center;
     justify-content: center;
-    
     margin: 0;
     padding: 0;
     min-width: 100vw;
@@ -28,7 +26,7 @@ body {
 
 .titulo {
     font-size: 250%;
-    color:#bbe1fa;
+    color: #ffffff; /* Blanco para destacar la cabecera */
     text-align: center;
     margin-bottom: 20px;
 }
@@ -36,37 +34,27 @@ body {
 #login {
     width: 100%;
     padding: 50px 30px;
-    background-color: #3282b8;
-    
+    background-color: rgb(38, 186, 165); /* Fondo del login con color primario */
     -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
     -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
     box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
-    
-    border-radius: 3px 3px 3px 3px;
-    -moz-border-radius: 3px 3px 3px 3px;
-    -webkit-border-radius: 3px 3px 3px 3px;
-    
+    border-radius: 3px;
     box-sizing: border-box;
 }
 
 #login input {
     font-family: 'Overpass', sans-serif;
     font-size: 110%;
-    color: #1b262c;
-    
+    color: rgb(55, 95, 122); /* Color del texto del input */
     display: block;
     width: 100%;
     height: 40px;
-    
     margin-bottom: 10px;
     padding: 5px 5px 5px 10px;
-    
     box-sizing: border-box;
-    
     border: none;
-    border-radius: 3px 3px 3px 3px;
-    -moz-border-radius: 3px 3px 3px 3px;
-    -webkit-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px;
+    background-color: #ffffff; /* Fondo blanco para los inputs */
 }
 
 #login input::placeholder {
@@ -77,40 +65,35 @@ body {
 #login button {
     font-family: 'Overpass', sans-serif;
     font-size: 110%;
-    color:#1b262c;
+    color: #ffffff; /* Texto blanco */
     width: 100%;
     height: 40px;
     border: none;
-    
-    border-radius: 3px 3px 3px 3px;
-    -moz-border-radius: 3px 3px 3px 3px;
-    -webkit-border-radius: 3px 3px 3px 3px;
-    
-    background-color: #bbe1fa;
-    
+    border-radius: 3px;
+    background-color: rgb(55, 95, 122); /* Botón con el color secundario */
     margin-top: 10px;
 }
 
 #login button:hover {
-    background-color: #0f4c75;
-    color:#bbe1fa;
+    background-color: rgb(38, 186, 165); /* Cambio de color al hacer hover */
+    color: #ffffff;
 }
 
 .pie-form {
     font-size: 90%;
-    text-align: center;    
+    text-align: center;
     margin-top: 15px;
 }
 
 .pie-form a {
     display: block;
     text-decoration: none;
-    color: #bbe1fa;
+    color: #ffffff;
     margin-bottom: 3px;
 }
 
 .pie-form a:hover {
-    color: #0f4c75;
+    color: rgb(55, 95, 122); /* Hover con color secundario */
 }
 
 .inferior {
@@ -122,12 +105,12 @@ body {
 .inferior a {
     display: block;
     text-decoration: none;
-    color: #bbe1fa;
+    color: #ffffff;
     margin-bottom: 3px;
 }
 
 .inferior a:hover {
-    color: #3282b8;
+    color: rgb(38, 186, 165); /* Hover con el color primario */
 }
 
 
