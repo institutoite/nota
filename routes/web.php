@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Materia;
+use App\Http\Controllers\NotaController;
+
+
 Route::get('/', function () {
     $materias=Materia::all();
     return view('welcome',compact("materias"));
@@ -16,3 +19,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::post('guardar-notas', [NotaController::class, 'guardarNotas'])->name('guardar.notas');
