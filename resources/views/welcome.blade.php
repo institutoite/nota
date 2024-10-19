@@ -37,7 +37,7 @@
                 <span class="text-danger">{{ $errors->first('materia_id') }}</span>
             @endif
             <select class="form-control" name="materia_id" id="materia_id" required>
-                <option value="">Seleccione una materia</option>
+                <option value="0">Seleccione una materia</option>
                 @foreach($materias as $materia)
                     <option value="{{ $materia->id }}" {{ old('materia_id') == $materia->id ? 'selected' : '' }}>{{ $materia->materia }}</option>
                 @endforeach

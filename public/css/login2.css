@@ -84,12 +84,13 @@ html {
 }
 .form-group .form-control:focus, .form-group .form-control:valid {
   outline: none;
-  color: #26baa5;
+  color: #0f8271;
+  font-size: 1.3em;
   box-shadow: 0 1px #26baa5;
   border-color: #26baa5;
 }
 .form-group .form-control:focus + .form-label, .form-group .form-control:valid + .form-label {
-  font-size: 14px;
+  font-size: 0.7em;
   transform: translateY(-15px);
 }
 

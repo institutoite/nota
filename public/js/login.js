@@ -14,13 +14,6 @@ $(document).ready(function() {
       var trimestre2 = $('#trimestre2').val();
       var materia_id = $('#materia_id').val();
       var telefono = $('#telefono').val();
-
-      // Verifica si todos los campos están completos
-      // if (trimestre1 == '' || trimestre2 == '' || materia_id == '' || telefono == '') {
-      //     alert('Por favor, complete todos los campos.');
-      //     return;
-      // }
-
       // Realizar la solicitud AJAX
       $.ajax({
           url: "guardar-notas",  // Ruta en Laravel
@@ -48,8 +41,8 @@ $(document).ready(function() {
 
   // Función para enviar el mensaje de WhatsApp
   function enviarWhatsapp(telefono) {
-      var mensaje = encodeURIComponent("Hola, tus notas han sido registradas correctamente.");
-      var url = "https://api.whatsapp.com/send?phone=" + telefono + "&text=" + mensaje;
+      var mensaje = encodeURIComponent("La nota minima que tienes que tienes que optener en:");
+      var url = "https://api.whatsapp.com/send?phone=" + telefono + "&text="+ response.materia + mensaje;
       window.open(url, '_blank');  // Abrir en una nueva pestaña
   }
 });
