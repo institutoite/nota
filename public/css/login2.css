@@ -89,10 +89,18 @@ html {
   box-shadow: 0 1px #26baa5;
   border-color: #26baa5;
 }
-.form-group .form-control:focus + .form-label, .form-group .form-control:valid + .form-label {
+/* .form-group .form-control:focus + .form-label, .form-group .form-control:valid + .form-label {
+  font-size: 0.7em;
+  transform: translateY(-15px);
+} */
+.form-group .form-control:focus + .form-label, 
+.form-group .form-control:valid + .form-label,
+.form-group .form-control:not([value=""]) + .form-label, /* Asegura que el label se mueva si el campo no está vacío */
+.form-group .form-control:focus:invalid + .form-label { /* El label se moverá incluso si el campo es inválido */
   font-size: 0.7em;
   transform: translateY(-15px);
 }
+
 
 .floating-btn {
     background: rgb(55,95,122);
@@ -154,3 +162,16 @@ html {
     /*-color: #333; /* Color del texto, ajustable según tu diseño */
     color: rgb(55, 95, 122);
 }
+
+
+/*%%%%%%%%%%%%%%%%%%%%%%  error de validacion %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+.is-invalid {
+  border-color: #dc3545;  /* Color rojo */
+  font-size:7px;
+}
+
+.text-danger {
+  color: #dc3545;  /* Color rojo para el mensaje */
+  font-size: 7px; /* Tamaño pequeño para el mensaje */
+}
+

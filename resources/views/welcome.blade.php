@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>ITE CALCULADORA</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    
     <link rel="stylesheet" href="{{ asset('css/login2.css') }}">
 </head>
 <body>
@@ -15,8 +16,31 @@
         <div class="thumbur">
             <div class="icon-lock"></div>
         </div>
+        <div class="form-group">
+            <input class="form-control" type="number" name="trimestre1" max="100" id="trimestre1" value="{{ old('trimestre1', 31) }}" min="0" required="required"/>
+            <label class="form-label">Nota del primer trimestre</label>
+        </div>
         
         <div class="form-group">
+            <input class="form-control" type="number" name="trimestre2" id="trimestre2" value="{{ old('trimestre2', 50) }}" min="0" required="required"/>
+            <label class="form-label">Nota del segundo trimestre</label>
+        </div>
+        
+        <div class="form-group">
+            <select class="form-control" name="materia_id" id="materia_id" required>
+                <option value="0">Seleccione una materia</option>
+                @foreach($materias as $materia)
+                    <option value="{{ $materia->id }}" {{ old('materia_id') == $materia->id ? 'selected' : '' }}>{{ $materia->materia }}</option>
+                @endforeach
+            </select>
+            <label class="form-label">Materia</label>
+        </div>
+        
+        <div class="form-group">
+            <input class="form-control" type="number" name="telefono" id="telefono" value="{{ old('telefono', 71039910) }}" min="0" required="required"/>
+            <label class="form-label">Teléfono</label>
+        </div>
+        {{-- <div class="form-group">
             @if ($errors->has('trimestre1'))
                 <span class="text-danger">{{ $errors->first('trimestre1') }}</span>
             @endif
@@ -53,7 +77,7 @@
             <label class="form-label">Teléfono</label>
         </div>
         
-        
+         --}}
         
         <button class="floating-btn" id="submitBtn"><i class="icon-arrow"></i></button>
         
