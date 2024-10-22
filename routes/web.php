@@ -21,3 +21,6 @@ Route::middleware([
 });
 
 Route::post('guardar-notas', [NotaController::class, 'guardarNotas'])->name('guardar.notas');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

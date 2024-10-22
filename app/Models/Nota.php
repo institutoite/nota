@@ -15,4 +15,8 @@ class Nota extends Model
         'materia_id',
         'telefono'
     ];
+
+    public function materia() {
+        return $this->belongsTo(Materia::class);  // Relación de uno a muchos con la tabla 'materias'
+    }
 }
